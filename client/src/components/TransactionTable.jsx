@@ -30,7 +30,7 @@ const TransactionTable = ({
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/transactions?month=${
+          `https://roxiler-c2xi.onrender.com/transactions?month=${
             month ? month : "01"
           }&perPage=${rowsPerPage}&page=${page}&search=${searchValue}`
         );

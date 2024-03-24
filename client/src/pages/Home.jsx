@@ -35,7 +35,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/statisticsandcharts?month=${month}`
+          `https://roxiler-c2xi.onrender.com/statisticsandcharts?month=${month}`
         );
         setStatisticsAndChartsData(response.data);
         // setLoading(false);
