@@ -21,6 +21,10 @@ const statisticsAndChartsRoutes = require("./routes/statisticsAndChartsRoutes");
 app.use(cors());
 
 // Use routes
+app.get("/", async (req, res) => {
+  res.send("This is Roxiler Backend API Task!");
+});
+
 app.use("/transactions", transactionsRoutes);
 app.use("/seed-database", seedExistingDataRoutes);
 app.use("/statistics", statisticsRoutes);
