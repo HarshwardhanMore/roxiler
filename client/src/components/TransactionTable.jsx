@@ -188,7 +188,7 @@ const TransactionTable = ({
                     <img
                       src={item?.image}
                       alt=""
-                      className="h-8 sm:h-16 lg:h-20 w-auto"
+                      className="h-8 sm:h-16 lg:h-20 w-auto object-contain"
                     />
                   </div>
                 </div>
@@ -274,7 +274,7 @@ const TransactionTable = ({
         </div>
       </div>
       {dialogVisibility && (
-        <div className="w-[100vw] h-[100vh] top-0 left-0 absolute flex justify-center items-center mx-auto bg-[#00000080] z-50">
+        <div className="w-[100vw] h-[100vh] fixed top-0 left-0 flex justify-center items-center mx-auto bg-[#00000080] z-50">
           <div className="w-5/6 sm:w-4/6 lg:w-3/6 h-5/6 flex flex-col items-end bg-secondary-bg-col p-6 shadow-xl rounded-lg overflow-x-hidden overflow-y-scroll dialog">
             <div>
               <button onClick={() => setDialogVisibility(false)}>
@@ -283,9 +283,9 @@ const TransactionTable = ({
             </div>
             <div className="w-full">
               <div className="w-full flex justify-center relative py-6">
-                <img src={selectedData?.image} alt="" className="w-[75%]" />
+                <img src={selectedData?.image} alt="" className="h-48 sm:h-64 lg:h-72 object-contain" />
 
-                <div className="absolute top-4 right-4">
+                <div className="absolute top-4 right-0 sm:right-4">
                   {selectedData?.sold == true ? (
                     <div className="px-2 py-0.5 text-xs sm:text-sm rounded-full bg-green-100 text-green-500">
                       Sold
@@ -310,7 +310,7 @@ const TransactionTable = ({
               <div className="inline-block px-2 py-0.5 font-semibold rounded-lg bg-gray-100 text-gray-500 capitalize text-sm my-1 sm:my-2">
                 {selectedData?.category}
               </div>
-              <div className="sm:font-semibold text-sm sm:text-base my-1 sm:my-2">
+              <div className="font-semibold text-sm sm:text-base my-1 sm:my-2">
                 <span className="mr-1 text-green-500">₹</span>
                 <span>{selectedData?.price}</span>
               </div>
