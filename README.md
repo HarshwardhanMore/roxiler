@@ -7,6 +7,7 @@
    c) npm run install-client
    d) npm run start-client
 3) Front-End Url : https://roxiler-beige.vercel.app/
+   (Sometimes database is not seeded, then first refresh and then do some activity like change month or something and then refresh again. This will seed database and start the server)(SQLite database is used thats why it gave slow seeding issue)
 4) Back-End-API Url : https://roxiler-c2xi.onrender.com/
 
 # Back-End API Endpoints
